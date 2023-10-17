@@ -6,7 +6,6 @@ import Logo from '../../components/navbar/Logo';
 import {MINIMAL_VIEWPORTS} from "@storybook/addon-viewport"
 
 
-
 const meta: Meta<typeof Navbar> = {
   title: 'ui/Navbar',
   component: Navbar,
@@ -14,28 +13,6 @@ const meta: Meta<typeof Navbar> = {
 
 type Story = StoryObj<typeof Navbar>
 
-const navLinks = [
-  {
-    label:'Home',
-    toUrl:''
-  },
-  {
-    label:'About',
-    toUrl:''
-  },
-  {
-    label:'Gallery',
-    toUrl:''
-  },
-  {
-    label:'Services',
-    toUrl:''
-  },
-  {
-    label:'Contact',
-    toUrl:''
-  },
-]
 
 const testCaseRadialGradient = {
   background:"radial-gradient(circle at 50% 50%, #667eea, #3d235a)",
