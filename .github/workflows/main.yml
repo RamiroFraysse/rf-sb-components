@@ -30,10 +30,10 @@ jobs:
           node-version: 18.13.0
 
       - name: Install Dependencies
-        run: pnpm install
+        run: npm install
 
       - name: Build App
-        run: pnpm run build
+        run: npm run build
       # Despues del build vamos a ejecutar el semantic release
       - name: Semantic Release
         env:
