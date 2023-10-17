@@ -15,12 +15,7 @@ export interface Props {
   linksColor: string;
 }
 
-export default function Navbar({
-  logo,
-  navLinks,
-  background,
-  linksColor,
-}: Props) {
+export function Navbar({ logo, navLinks, background, linksColor }: Props) {
   return (
     <header
       className="header"
@@ -64,3 +59,5 @@ export default function Navbar({
     </header>
   );
 }
+
+export default Navbar;

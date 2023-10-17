@@ -1,8 +1,8 @@
 import { within,userEvent } from '@storybook/testing-library';
 import {expect} from '@storybook/jest'
 import { Meta, StoryObj } from '@storybook/react';
-import Navbar from '../../components/navbar/Navbar';
-import Logo from '../../components/navbar/Logo';
+import Navbar from './components/Navbar';
+import Logo from './components/Logo';
 import {MINIMAL_VIEWPORTS} from "@storybook/addon-viewport"
 
 

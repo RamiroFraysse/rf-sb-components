@@ -1,5 +1,3 @@
-import React from "react";
-
 export interface Props {
   width?: string;
   height?: string;
