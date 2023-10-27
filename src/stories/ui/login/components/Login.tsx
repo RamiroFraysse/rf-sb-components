@@ -6,7 +6,7 @@ import {
 import Form from "./Form";
 import { Props } from "./Models";
 
-function Login({
+export function Login({
   onSubmit,
   initialValues,
   validationSchema,
