@@ -1,5 +1,4 @@
 import { Formik } from "formik";
-import * as Yup from "yup";
 import InputText from "./InputText";
 import {
   Title,
@@ -7,7 +6,7 @@ import {
   SubmitButton,
   StyledForm,
 } from "../styled-components/FormStyles";
-import { Field, Props, TypeValues } from "./Models";
+import { Field, Props } from "./Models";
 
 function Form({
   onSubmit,
