@@ -20,11 +20,10 @@ export interface Props {
   title: string;
   children?: JSX.Element;
   information?: string;
-
   navActions?: NavAction[];
 }
 
-function Card({
+export function Card({
   background,
   title,
   information,
