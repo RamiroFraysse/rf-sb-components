@@ -6,7 +6,7 @@ import {
   SubmitButton,
   StyledForm,
 } from "../styled-components/FormStyles";
-import { Field, Props } from "./Models";
+import { Field, Props } from "../models/Models";
 
 function Form({
   onSubmit,

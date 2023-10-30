@@ -4,7 +4,7 @@ import {
   LoginWrapper,
 } from "../styled-components/LoginStyles";
 import Form from "./Form";
-import { Props } from "./Models";
+import { Props } from "../models/Models";
 
 export function Login({
   onSubmit,

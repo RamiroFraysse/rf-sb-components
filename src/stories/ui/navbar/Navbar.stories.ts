@@ -69,7 +69,7 @@ export const MobileView:Story = {
     logo: Logo({width:"100",height:"50"}),
     navLinks:testCaseRadialGradient.navLinks,
     background: testCaseRadialGradient.background,
-    linksColor:testCaseRadialGradient.navLinksColors
+    stylesLinks:{color:testCaseRadialGradient.navLinksColors}
   },
   parameters:{
     viewport:{
@@ -101,7 +101,7 @@ export const DesktopView:Story = {
     logo: Logo({width:"100",height:"50"}),
     navLinks:testCaseRadialGradient.navLinks,
     background: testCaseRadialGradient.background,
-    linksColor:testCaseRadialGradient.navLinksColors
+    stylesLinks:{color:testCaseRadialGradient.navLinksColors},
   },
 }
 

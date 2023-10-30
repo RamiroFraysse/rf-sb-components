@@ -8,20 +8,37 @@ export interface NavLink {
   label: string;
 }
 
-export interface Props {
-  logo: JSX.Element;
-  navLinks: NavLink[];
-  background: string;
-  linksColor: string;
+export interface NavAction {
+  label: string;
+  onClick: () => void;
 }
 
-export function Navbar({ logo, navLinks, background, linksColor }: Props) {
+export interface Props {
+  logo: JSX.Element;
+  navLinks?: NavLink[];
+  navActions?: NavAction[];
+  background: string;
+  stylesNav?: React.CSSProperties;
+  stylesLinks?: React.CSSProperties;
+  stylesActions?: React.CSSProperties;
+}
+
+export function Navbar({
+  logo,
+  navLinks,
+  navActions,
+  stylesActions,
+  stylesNav,
+  background,
+  stylesLinks,
+}: Props) {
   return (
     <header
       className="header"
       title="navbar"
       style={{
         background: background,
+        ...stylesNav,
       }}
     >
       <a href="#" className="logo" role="link" title="logo" data-testid="logo">
@@ -45,16 +62,28 @@ export function Navbar({ logo, navLinks, background, linksColor }: Props) {
         defaultValue="blue"
         $background={background}
       >
-        {navLinks.map(({ toUrl, label }) => (
-          <a
-            href={toUrl}
-            key={`navbar-${label}`}
-            title={label}
-            style={{ color: linksColor }}
-          >
-            {label}
-          </a>
-        ))}
+        {navLinks &&
+          navLinks.map(({ toUrl, label }) => (
+            <a
+              href={toUrl}
+              key={`navbar-${label}`}
+              title={label}
+              style={{ ...stylesLinks }}
+            >
+              {label}
+            </a>
+          ))}
+        {navActions &&
+          navActions.map(({ label, onClick }) => (
+            <button
+              key={`navbar-action-${label}`}
+              title={label}
+              onClick={onClick}
+              style={{ ...stylesActions }}
+            >
+              {label}
+            </button>
+          ))}
       </NavWrapper>
     </header>
   );
