@@ -1,8 +1,7 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const CardStyled = styled.div<{ $background?: string, $cardStyles?: React.CSSProperties }>`
   font-family: "system-ui";
-
   width:15rem;
   border-radius: 1rem;
   box-shadow:0px 10px 8px #999;
@@ -10,8 +9,12 @@ export const CardStyled = styled.div<{ $background?: string, $cardStyles?: React
   flex-direction: column;
   margin: .5rem;
   background-color: ${({ $background }) => $background};
-  height:fit-content ;
-  {...cardStyles}
+  height:fit-content;
+  ${({ $cardStyles }) => (
+    // eslint-disable-next-line
+    // @ts-ignore
+    $cardStyles && css($cardStyles)
+  )};
 `;
 
 export const CardTitle = styled.h2`
@@ -47,5 +50,9 @@ export const CardAction = styled.button<{ $actionStyles?: React.CSSProperties }>
     border: 2px solid #007bff;
     opacity: 0.8;
   }
-  ...actionStyles;
+  ${({ $actionStyles }) => (
+    // eslint-disable-next-line
+    // @ts-ignore
+    $actionStyles && css($actionStyles)
+  )};
 `;

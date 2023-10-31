@@ -15,6 +15,7 @@ export const DesktopView:Story = {
     id:1,
     title: 'Title',
     subtitle:'Subtitle',
+    cardStyles:{backgroundColor:'#f3f300'},
     img:'https://picsum.photos/300/200',
     information:'Information',
     background:'#efefef',
