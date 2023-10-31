@@ -1,12 +1,14 @@
 import React from "react";
 import {
   CardAction,
+  CardImage,
   CardInformation,
   CardStyled,
+  CardSubtitle,
   CardTitle,
 } from "./styled-components";
 
-type NavAction = {
+export type NavAction = {
   label: string;
   onClick: () => void;
 };
@@ -20,12 +22,14 @@ export interface Props {
   title: string;
   children?: JSX.Element;
   information?: string;
+  subtitle?: string;
   navActions?: NavAction[];
 }
 
 export function Card({
   background,
   title,
+  subtitle,
   information,
   img,
   children,
@@ -35,8 +39,9 @@ export function Card({
 }: Props) {
   return (
     <CardStyled $background={background} $cardStyles={cardStyles}>
-      {img && <img src={img} alt={title} />}
+      {img && <CardImage src={img} alt={title} />}
       <CardTitle>{title}</CardTitle>
+      {subtitle && <CardSubtitle>{subtitle}</CardSubtitle>}
       {information && <CardInformation>{information}</CardInformation>}
       {children && children}
       {navActions &&

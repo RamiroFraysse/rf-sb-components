@@ -19,8 +19,12 @@ export const CardTitle = styled.h2`
 `;
 
 export const CardInformation = styled.p`
+  font-size:0.875rem;
   margin:.5rem 5%;
+`;
 
+export const CardSubtitle = styled.h3`
+  margin:.5rem 5%;
 `;
 
 export const CardImage = styled.img`
