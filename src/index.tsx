@@ -1,3 +1,3 @@
 export { Navbar } from "./stories/ui/navbar/components/Navbar";
-export { Login } from "./stories/ui/login/components/Login";
+export { AccessForm } from "./stories/ui/login/components/AccessForm";
 export { Card } from "./stories/ui/card/components/Card";

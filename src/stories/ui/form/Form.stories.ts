@@ -1,18 +1,32 @@
 import { Meta, StoryObj } from '@storybook/react';
-import Login from './components/Login';
 import * as Yup from 'yup';
+import {Form} from './components';
 
-const meta: Meta<typeof Login> = {
-  title: 'ui/Login',
-  component: Login,
+const meta: Meta<typeof Form> = {
+  title: 'ui/Form',
+  component: Form,
 }
 
-type Story = StoryObj<typeof Login>
+type Story = StoryObj<typeof Form>
+
+export interface IUserForm{
+  email:string;
+  password:string;
+}
+
+
+const handleSubmit = async (values: any):Promise<void> => {
+  try {
+    console.log({values});
+    // eslint-disable-next-line
+  } catch (error: any) {
+    console.log({ code: error.code });
+  }
+};
 
 export const DesktopView:Story = {
   args:{
-    formTitle:'Exploring Clean Architecture Principles and Best Practices',
-    onSubmit:(values)=>{console.log(values)},
+    onSubmit: handleSubmit,
     initialValues:{email:'',password:''},
     validationSchema: Yup.object({
       email: Yup.string()
