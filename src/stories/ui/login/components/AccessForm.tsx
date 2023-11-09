@@ -3,7 +3,7 @@ import {
   Container,
   FormContainer,
   Wrapper,
-} from "../styled-components/LoginStyles";
+} from "../styled-components/AccessFormStyles";
 import { Props } from "../models/Models";
 import { Form } from "../../form/components";
 import { Title } from "../../form/styled-components/FormStyles";
