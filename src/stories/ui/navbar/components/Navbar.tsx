@@ -62,28 +62,34 @@ export function Navbar({
         defaultValue="blue"
         $background={background}
       >
-        {navLinks &&
-          navLinks.map(({ toUrl, label }) => (
-            <a
-              href={toUrl}
-              key={`navbar-${label}`}
-              title={label}
-              style={{ ...stylesLinks }}
-            >
-              {label}
-            </a>
-          ))}
-        {navActions &&
-          navActions.map(({ label, onClick }) => (
-            <button
-              key={`navbar-action-${label}`}
-              title={label}
-              onClick={onClick}
-              style={{ ...stylesActions }}
-            >
-              {label}
-            </button>
-          ))}
+        {navLinks && (
+          <div>
+            {navLinks.map(({ toUrl, label }) => (
+              <a
+                href={toUrl}
+                key={`navbar-${label}`}
+                title={label}
+                style={{ ...stylesLinks }}
+              >
+                {label}
+              </a>
+            ))}
+          </div>
+        )}
+        {navActions && (
+          <div>
+            {navActions.map(({ label, onClick }) => (
+              <button
+                key={`navbar-action-${label}`}
+                title={label}
+                onClick={onClick}
+                style={{ ...stylesActions }}
+              >
+                {label}
+              </button>
+            ))}
+          </div>
+        )}
       </NavWrapper>
     </header>
   );
