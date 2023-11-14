@@ -1,7 +1,7 @@
-import CloseIcon from "./icons/CloseIcon";
-import MenuIcon from "./icons/MenuIcon";
+import CloseIcon from "../assets/icons/CloseIcon";
+import MenuIcon from "../assets/icons/MenuIcon";
 import "./navbar.css";
-import { NavWrapper } from "./styled-components/NavWrapper";
+import { NavWrapper } from "../styled-components/NavWrapper";
 
 export interface NavLink {
   toUrl: string;

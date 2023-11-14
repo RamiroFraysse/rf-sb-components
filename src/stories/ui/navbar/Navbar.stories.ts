@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react';
 import Navbar from './components/Navbar';
-import Logo from './components/Logo';
+import Logo from './assets/Logo';
 import {MINIMAL_VIEWPORTS} from "@storybook/addon-viewport"
 import { testCase, testDesktop, testMobile } from './tests/testCases';
 
