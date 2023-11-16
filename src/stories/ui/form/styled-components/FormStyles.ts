@@ -58,6 +58,7 @@ export const InputContainer = styled.div`
 export const Label = styled.label`
   color: #fff;
   font-size: 1rem;
+  text-align: left;
 `;
 
 export const Input = styled.input`

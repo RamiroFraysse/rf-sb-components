@@ -5,7 +5,7 @@ export interface Field {
   name: string;
   placeholder: string;
   autoComplete: "on" | "off";
-  type:string;
+  type:TypeInputs;
 }
 export interface Props {
   onSubmit: <T>(values: T) => void;
@@ -16,3 +16,4 @@ export interface Props {
 }
 
 export type TypeValues = string | number | Date | boolean;
+export type TypeInputs = "text" | "email" | "password" | "number";

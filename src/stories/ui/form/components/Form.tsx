@@ -21,6 +21,7 @@ function Form({ onSubmit, initialValues, validationSchema, fields }: Props) {
                 id={field.id}
                 label={field.label}
                 name={field.name}
+                type={field.type}
                 placeholder={field.placeholder}
                 autoComplete={field.autoComplete}
               />

@@ -2,7 +2,8 @@ import styled from "styled-components";
 
 export const FormContainer = styled.div`
   position: relative;
-  min-width:500px;
+  min-width:min-content;
+  padding:1rem;
   background-color:#1d4e89; 
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
   @media (min-width: 640px) {
