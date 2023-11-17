@@ -32,7 +32,9 @@
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "test-storybook": "test-storybook --verbose"
+    "test-storybook": "test-storybook --verbose",
+    "storybook:build": "storybook build",
+    "storybook:publish": "npm run storybook:build && touch ./storybook-static/.nojekyll && mv ./storybook-static ./docs && gh-pages -d ./docs -t true"
   },
   "peerDependencies": {
     "react": "^16.8.0",
