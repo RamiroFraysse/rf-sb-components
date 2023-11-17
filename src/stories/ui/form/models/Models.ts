@@ -11,9 +11,24 @@ export interface Field {
 }
 
 export interface Props {
+  /**
+   * callback submit form
+   */
   onSubmit: <T>(values: T) => void;
+  
+  /**
+   * initial values of form
+   */
   initialValues: { [key: string]: TypeValues };
+
+  /**
+   * yup validation schema
+   */
   validationSchema: Yup.ObjectSchema<any>;
+
+  /**
+   * fields of form 
+   */
   fields: Field[];
 }
 

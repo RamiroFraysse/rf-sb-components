@@ -4,6 +4,7 @@ import Card from './components/Card';
 const meta: Meta<typeof Card> = {
   title: 'ui/Card',
   component: Card,
+  tags: ['autodocs'],
 }
 
 type Story = StoryObj<typeof Card>

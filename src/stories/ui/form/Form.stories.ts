@@ -5,6 +5,7 @@ import {Form} from './components';
 const meta: Meta<typeof Form> = {
   title: 'ui/Form',
   component: Form,
+  tags: ['autodocs'],
 }
 
 type Story = StoryObj<typeof Form>

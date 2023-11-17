@@ -1,10 +1,12 @@
 import { Meta, StoryObj } from '@storybook/react';
 import AccessForm from './components/AccessForm';
+import {MINIMAL_VIEWPORTS} from "@storybook/addon-viewport"
 import * as Yup from 'yup';
 
 const meta: Meta<typeof AccessForm> = {
-  title: 'ui/Login',
+  title: 'ui/AccessForm',
   component: AccessForm,
+  tags: ['autodocs'],
 }
 
 type Story = StoryObj<typeof AccessForm>
@@ -65,6 +67,51 @@ export const DesktopView:Story = {
       }
     ]
   },
+}
+
+export const MobileView:Story = {
+  args:{
+    formTitle:'Exploring Clean Architecture Principles and Best Practices',
+    onSubmit:<IUserForm>(values:IUserForm)=>{
+      console.log(values);
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      //@ts-ignore
+      login(values);
+    },
+    initialValues:{email:'',password:''},
+    validationSchema: Yup.object({
+      email: Yup.string()
+        .email("Invalid email format")
+        .required("Required"),
+      password: Yup.string()
+        .min(6, "Password must contain at least 6 characters")
+        .required("Required"),
+    }),
+    fields:[
+      {
+        label:'Email',
+        name:'email',
+        placeholder:'Email',
+        autoComplete:'off',
+        type:'email',
+        id:'email',
+      },
+      {
+        label:'Password',
+        name:'password',
+        placeholder:'Password',
+        autoComplete:'off',
+        type:'password',
+        id:'password',
+      }
+    ]
+  },
+  parameters:{
+    viewport:{
+      viewports:MINIMAL_VIEWPORTS,
+      defaultViewport:"mobile2"
+    }
+  }
 }
 
 

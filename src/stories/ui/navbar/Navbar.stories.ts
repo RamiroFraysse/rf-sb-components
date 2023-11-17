@@ -8,6 +8,7 @@ import { testCase, testDesktop, testMobile } from './tests/testCases';
 const meta: Meta<typeof Navbar> = {
   title: 'ui/Navbar',
   component: Navbar,
+  tags: ['autodocs'],
 }
 
 type Story = StoryObj<typeof Navbar>
@@ -38,7 +39,6 @@ export const DesktopView:Story = {
   args:{
     logo: Logo({width:"100",height:"50"}),
     navLinks:testCase.navLinks,
-    navActions:testCase.navActions,
     background: testCase.background,
     stylesLinks:{color:testCase.navLinksColors},
   },

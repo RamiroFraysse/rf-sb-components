@@ -14,15 +14,54 @@ export type NavAction = {
 };
 
 export interface Props {
+  /**
+   * Id of the card
+   */
   id?: string | number;
+
+  /**
+   * Url of the image
+   */
   img?: string;
+
+  /**
+   * Background of the card
+   */
   background?: string;
+
+  /**
+   * Styled of the card
+   */
   cardStyles?: React.CSSProperties;
+
+  /**
+   * Styles actions
+   */
   actionStyles?: React.CSSProperties;
+
+  /**
+   * Title of the card
+   */
   title: string;
+
+  /**
+   * Children of the card
+   */
   children?: JSX.Element;
+
+  /**
+   * Description of the card
+   */
   information?: string;
+
+  /**
+   * Subtitle of the card
+   */
   subtitle?: string;
+
+  /**
+   * Actions of the card
+   */
   navActions?: NavAction[];
 }
 
