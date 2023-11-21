@@ -53,14 +53,14 @@ export const SubmitButton = styled.button`
 
 export const InputContainer = styled.div`
   position: relative;
+  width:100%;
+`;
+
+export const FieldContainer = styled.div`
   display:flex;
   flex-direction: column;
   gap:5px;
   align-items:start;
-  
-`;
-
-export const FieldContainer = styled.div`
 `;
 
 export const Label = styled.label`

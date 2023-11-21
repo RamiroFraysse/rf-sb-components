@@ -3,7 +3,7 @@ import { ErrorMessage, useField } from "formik";
 import {
   ErrorMessageSpan,
   Input,
-  InputContainer,
+  FieldContainer,
   Label,
 } from "../styled-components/FormStyles";
 
@@ -30,7 +30,7 @@ function InputText({
   const [field, meta] = useField(props);
 
   return (
-    <InputContainer>
+    <FieldContainer>
       <Label htmlFor={id}>{label}</Label>
       <Input
         disabled={isDisabled}
@@ -44,7 +44,7 @@ function InputText({
           <ErrorMessage name={props.name} />
         </ErrorMessageSpan>
       )}
-    </InputContainer>
+    </FieldContainer>
   );
 }
 
