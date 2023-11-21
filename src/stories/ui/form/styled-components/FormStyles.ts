@@ -53,6 +53,14 @@ export const SubmitButton = styled.button`
 
 export const InputContainer = styled.div`
   position: relative;
+  display:flex;
+  flex-direction: column;
+  gap:5px;
+  align-items:start;
+  
+`;
+
+export const FieldContainer = styled.div`
 `;
 
 export const Label = styled.label`
@@ -60,6 +68,9 @@ export const Label = styled.label`
   font-size: 1rem;
   text-align: left;
 `;
+
+const paddingInput = 10;
+const borderInput = 2;
 
 export const Input = styled.input`
   width: 100%;
@@ -70,10 +81,9 @@ export const Input = styled.input`
   transition: border 0.2s;
   color: #fff;
   background: transparent;
-  placeholder-opacity: 0.25;
-
+  placeholder-opacity: 0.25;  
   &:focus {
-    border: 2px solid #6EE7B7;
+    border: ${borderInput}px solid #6EE7B7;
   }
 `;
 
@@ -82,3 +92,12 @@ export const ErrorMessageSpan = styled.span`
   font-weight: bold;
   font-size: 0.875rem;
 `;
+
+export const IconButton = styled.a`
+  cursor: pointer;
+  color: #fff;
+  position: absolute;
+  top: calc(50% - ${paddingInput + borderInput}px);
+  right: 3%;
+`
+

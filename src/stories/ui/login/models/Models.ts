@@ -4,6 +4,7 @@ export interface Field {
   label: string;
   name: string;
   placeholder: string;
+  icon?: React.ReactNode;
   autoComplete: "on" | "off";
   type:TypeInputs;
 }

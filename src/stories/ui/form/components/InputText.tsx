@@ -16,6 +16,7 @@ interface Props {
   className?: string;
   isDisabled?: boolean;
   autoComplete?: "off" | "on";
+  icon?: React.ReactNode;
 }
 
 function InputText({
@@ -23,6 +24,7 @@ function InputText({
   id,
   className = "",
   isDisabled = false,
+  type,
   ...props
 }: Props): React.ReactElement {
   const [field, meta] = useField(props);
@@ -32,7 +34,7 @@ function InputText({
       <Label htmlFor={id}>{label}</Label>
       <Input
         disabled={isDisabled}
-        type="text" // Cambia esto según el tipo
+        type={type}
         {...field}
         {...props}
         className={className}

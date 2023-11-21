@@ -8,6 +8,7 @@ export interface Field {
   placeholder: string;
   autoComplete: "on" | "off";
   type:TypeInputs;
+  icon?: React.ReactNode;
 }
 
 export interface Props {
