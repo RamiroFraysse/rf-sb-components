@@ -37,8 +37,8 @@
     "storybook:publish": "npm run storybook:build && touch ./storybook-static/.nojekyll && mv ./storybook-static ./docs && gh-pages -d ./docs -t true"
   },
   "peerDependencies": {
-    "react": "^16.8.0",
-    "react-dom": "^16.8.0"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "vite-plugin-svgr": "^4.1.0",
