@@ -2,7 +2,6 @@ import { Meta, StoryObj } from '@storybook/react';
 import AccessForm from './components/AccessForm';
 import {MINIMAL_VIEWPORTS} from "@storybook/addon-viewport"
 import * as Yup from 'yup';
-import {SpinnerIcon} from '../form/assets/icons/SpinnerIcon';
 
 const meta: Meta<typeof AccessForm> = {
   title: 'ui/AccessForm',
