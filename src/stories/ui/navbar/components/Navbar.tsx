@@ -9,7 +9,7 @@ export interface NavLink {
 }
 
 export interface NavAction {
-  label: string;
+  label: React.ReactNode;
   onClick: () => void;
 }
 
