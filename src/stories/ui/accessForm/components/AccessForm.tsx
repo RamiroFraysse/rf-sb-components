@@ -4,29 +4,18 @@ import {
   FormContainer,
   Wrapper,
 } from "../styled-components/AccessFormStyles";
-import { Props } from "../models/Models";
+import { AccessFormProps } from "../models/Models";
 import { Form } from "../../form/components";
 import { Title } from "../../form/styled-components/FormStyles";
 
-export function AccessForm({
-  onSubmit,
-  initialValues,
-  validationSchema,
-  fields,
-  formTitle,
-}: Props) {
+export function AccessForm({ formTitle, ...rest }: AccessFormProps) {
   return (
     <Wrapper>
       <Container>
         <Background />
         <FormContainer>
           {formTitle && <Title>{formTitle}</Title>}
-          <Form
-            onSubmit={onSubmit}
-            initialValues={initialValues}
-            validationSchema={validationSchema}
-            fields={fields}
-          />
+          <Form {...rest} />
         </FormContainer>
       </Container>
     </Wrapper>

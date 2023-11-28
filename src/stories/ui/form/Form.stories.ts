@@ -54,7 +54,8 @@ export const DesktopView:Story = {
         type:'password',
         id:'password',
       }
-    ]
+    ],
+    
   },
 }
 

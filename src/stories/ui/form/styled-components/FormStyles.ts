@@ -31,7 +31,6 @@ export const StyledForm = styled(Form)`
 `;
 
 export const SubmitButton = styled.button`
-  
   width: 100%;
   display: inline-block;
   padding: 0.5rem 1rem; 
@@ -44,10 +43,13 @@ export const SubmitButton = styled.button`
   font-size: 1rem;
   line-height: 1.5;
   border: 2px solid transparent;
-
   &:hover {
-    border: 2px solid #007bff;
-    opacity: 0.8;
+    border: ${({ disabled }) => (disabled ? '2px solid transparent' : '2px solid #007bff')};
+    opacity: ${({ disabled }) => (disabled ? '1' : '0.8')};
+  }
+  &:disabled{
+    opacity:0.5;
+    cursor:not-allowed;
   }
 `;
 

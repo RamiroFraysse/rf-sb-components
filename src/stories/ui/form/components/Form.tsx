@@ -1,10 +1,17 @@
 import { Formik } from "formik";
 import InputText from "./InputText";
 import { SubmitButton, StyledForm } from "../styled-components/FormStyles";
-import { Field, Props } from "../models/Models";
+import { Field, FormProps } from "../models/Models";
 import InputPassword from "./InputPassword";
 
-function Form({ onSubmit, initialValues, validationSchema, fields }: Props) {
+function Form({
+  onSubmit,
+  initialValues,
+  validationSchema,
+  fields,
+  labelBtnSubmit,
+  btnSubmitProps,
+}: FormProps) {
   return (
     <Formik
       initialValues={initialValues}
@@ -43,7 +50,9 @@ function Form({ onSubmit, initialValues, validationSchema, fields }: Props) {
               }
             )}
             <div className="relative">
-              <SubmitButton type="submit">Submit</SubmitButton>
+              <SubmitButton type="submit" {...btnSubmitProps}>
+                {labelBtnSubmit || "Submit"}
+              </SubmitButton>
             </div>
           </StyledForm>
         );

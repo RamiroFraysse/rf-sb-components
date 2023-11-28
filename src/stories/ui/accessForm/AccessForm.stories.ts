@@ -2,6 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import AccessForm from './components/AccessForm';
 import {MINIMAL_VIEWPORTS} from "@storybook/addon-viewport"
 import * as Yup from 'yup';
+import {SpinnerIcon} from '../form/assets/icons/SpinnerIcon';
 
 const meta: Meta<typeof AccessForm> = {
   title: 'ui/AccessForm',
@@ -48,6 +49,7 @@ export const DesktopView:Story = {
         .min(6, "Password must contain at least 6 characters")
         .required("Required"),
     }),
+    labelBtnSubmit:"Submit",
     fields:[
       {
         label:'Email',
@@ -65,7 +67,7 @@ export const DesktopView:Story = {
         type:'password',
         id:'password',
       }
-    ]
+    ],
   },
 }
 

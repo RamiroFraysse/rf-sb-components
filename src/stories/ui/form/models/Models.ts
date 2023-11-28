@@ -11,26 +11,36 @@ export interface Field {
   icon?: React.ReactNode;
 }
 
-export interface Props {
+export interface FormProps {
   /**
-   * callback submit form
+   * Callback fired when submited form
    */
   onSubmit: <T>(values: T) => void;
   
   /**
-   * initial values of form
+   * Initial values of form
    */
   initialValues: { [key: string]: TypeValues };
 
   /**
-   * yup validation schema
+   * Yup validation schema
    */
   validationSchema: Yup.ObjectSchema<any>;
 
   /**
-   * fields of form 
+   * Fields of form 
    */
   fields: Field[];
+
+  /**
+   * Label content
+   */
+  labelBtnSubmit?: React.ReactNode;
+
+  /**
+   * Attributes applied to the submit button element 
+   */
+  btnSubmitProps?: React.ButtonHTMLAttributes<HTMLButtonElement>;
 }
 
 
